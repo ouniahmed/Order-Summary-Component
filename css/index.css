@@ -1,0 +1,146 @@
+/* ------------------
+      colors
+   ------------------ */
+/* ------------------
+      global
+   ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ------------------
+       typography
+   ------------------ */
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 500;
+  height: 100vh;
+  background-color: hsl(225deg, 100%, 94%);
+  display: flex;
+}
+
+.background-img {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background: url("../images/pattern-background-desktop.svg") no-repeat;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.card {
+  width: 90%;
+  max-width: 25rem;
+  min-width: 17.5rem;
+  margin: auto;
+  background-color: hsl(225deg, 100%, 98%);
+  border-radius: 0.9375rem;
+  font-size: 1rem;
+}
+.card__img {
+  border-top-left-radius: 0.9375rem;
+  border-top-right-radius: 0.9375rem;
+}
+.card__summary {
+  padding: 1rem 3rem;
+  color: hsl(224deg, 23%, 55%);
+}
+.card__title {
+  color: hsl(223deg, 47%, 23%);
+  font-size: 1.5rem;
+  font-weight: 900;
+  padding: 0.5em;
+}
+.card__plan {
+  background-color: #ebf0ff;
+  margin: 1rem 0;
+  border-radius: 0.3125rem;
+}
+.card__planType {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 700;
+  padding: 0.0625rem 0;
+}
+.card__planLink {
+  color: hsl(245deg, 75%, 52%);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.card__planLink:hover {
+  text-decoration: none;
+  color: #6255e7;
+}
+.card__btn {
+  display: block;
+  text-decoration: none;
+  color: hsl(224deg, 23%, 55%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  transition: all 100ms ease-in-out;
+}
+.card__btn--blue {
+  background-color: hsl(245deg, 75%, 52%);
+  color: hsl(225deg, 100%, 94%);
+  box-shadow: 0px 0.9375rem 0.625rem #dedbfa;
+}
+.card__btn--blue:hover {
+  background-color: #6255e7;
+  color: hsl(225deg, 100%, 94%);
+}
+.card__btn--transparent:hover {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+}
+
+/* ----------------------
+         layout
+   ---------------------- */
+.card__plan {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+}
+.card__planIcon {
+  max-width: 15%;
+  flex: 0.1;
+}
+.card__planInfo {
+  padding-left: 0.8em;
+  flex: 2;
+}
+.card__planLink {
+  flex: 0.1;
+}
+
+/* ----------------------
+         media queries
+   ---------------------- */
+@media (max-width: 25rem) {
+  .card__summary {
+    padding: 1rem;
+    color: hsl(224deg, 23%, 55%);
+  }
+}
+/* ----------------------
+         utils
+   ---------------------- */
+.card__title, .card__description, .card__btn {
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

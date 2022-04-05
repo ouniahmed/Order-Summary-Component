@@ -1,0 +1,170 @@
+/* ------------------
+      colors
+   ------------------ */
+$clr-primary-1: hsl(225, 100%, 94%);
+$clr-primary-2: hsl(245, 75%, 52%);
+$pale-blue: hsl(225, 100%, 98%);
+$desaturtedBlue: hsl(224, 23%, 55%);
+$darkBlue: hsl(223, 47%, 23%);
+
+/* ------------------
+      global
+   ------------------ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+/* ------------------
+       typography
+   ------------------ */
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	font-weight: 500;
+	height: 100vh;
+	background-color: $clr-primary-1;
+	display: flex;
+}
+
+.background-img {
+	position: absolute;
+	height: 50%;
+	width: 100%;
+	background: url('../images/pattern-background-desktop.svg') no-repeat;
+	background-size: 100% 100%;
+	z-index: -1;
+}
+
+.card {
+	width: 90%;
+	max-width: 25rem;
+	min-width: 17.5rem;
+	margin: auto;
+	background-color: $pale-blue;
+	border-radius: 0.9375rem;
+	font-size: 1rem;
+	&__img {
+		border-top-left-radius: 0.9375rem;
+		border-top-right-radius: 0.9375rem;
+	}
+	&__summary {
+		padding: 1rem 3rem;
+		color: $desaturtedBlue;
+	}
+	&__title {
+		color: $darkBlue;
+		font-size: 1.5rem;
+		font-weight: 900;
+		padding: 0.5em;
+		@extend %text-center;
+	}
+	&__description {
+		@extend %text-center;
+	}
+
+	&__plan {
+		background-color: lighten($clr-primary-1, 2);
+		margin: 1rem 0;
+		border-radius: 0.3125rem;
+	}
+
+	&__planType {
+		color: $darkBlue;
+		font-weight: 700;
+		padding: 0.0625rem 0;
+	}
+
+	&__planLink {
+		color: $clr-primary-2;
+		font-size: 0.8125rem;
+		font-weight: 700;
+	}
+
+	&__planLink:hover {
+		text-decoration: none;
+		color: lighten($clr-primary-2, 10);
+	}
+
+	&__btn {
+		display: block;
+		text-decoration: none;
+		color: $desaturtedBlue;
+		font-size: 0.8rem;
+		font-weight: 700;
+		padding: 0.8rem;
+		margin: 0.5rem 0;
+		@extend %text-center;
+		border-radius: 0.5rem;
+		transition: all 100ms ease-in-out;
+	}
+	&__btn--blue {
+		background-color: $clr-primary-2;
+		color: $clr-primary-1;
+		box-shadow: 0px 0.9375rem 0.625rem lighten($clr-primary-2, 40);
+	}
+
+	&__btn--blue:hover {
+		background-color: lighten($clr-primary-2, 10);
+		color: $clr-primary-1;
+	}
+
+	&__btn--transparent:hover {
+		color: $darkBlue;
+		font-weight: 900;
+	}
+}
+
+/* ----------------------
+         layout
+   ---------------------- */
+
+.card {
+	&__plan {
+		display: flex;
+		padding: 1rem;
+		align-items: center;
+	}
+
+	&__planIcon {
+		max-width: 15%;
+		flex: 0.1;
+	}
+	&__planInfo {
+		padding-left: 0.8em;
+		flex: 2;
+	}
+	&__planLink {
+		flex: 0.1;
+	}
+}
+
+/* ----------------------
+         media queries
+   ---------------------- */
+
+@media (max-width: 25rem) {
+	.card__summary {
+		padding: 1rem;
+		color: $desaturtedBlue;
+	}
+}
+
+/* ----------------------
+         utils
+   ---------------------- */
+%text-center {
+	text-align: center;
+}
