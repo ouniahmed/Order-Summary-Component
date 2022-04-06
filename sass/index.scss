@@ -35,7 +35,7 @@ body {
 	font-family: 'Red Hat Display', sans-serif;
 	font-weight: 500;
 	height: 100vh;
-	background-color: $clr-primary-1;
+	background-color: $pale-blue;
 	display: flex;
 }
 
@@ -53,7 +53,7 @@ body {
 	max-width: 25rem;
 	min-width: 17.5rem;
 	margin: auto;
-	background-color: $pale-blue;
+	background-color: #fff;
 	border-radius: 0.9375rem;
 	font-size: 1rem;
 	&__img {
@@ -76,7 +76,7 @@ body {
 	}
 
 	&__plan {
-		background-color: lighten($clr-primary-1, 2);
+		background-color: lighten($clr-primary-1, 5);
 		margin: 1rem 0;
 		border-radius: 0.3125rem;
 	}

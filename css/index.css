@@ -27,7 +27,7 @@ body {
   font-family: "Red Hat Display", sans-serif;
   font-weight: 500;
   height: 100vh;
-  background-color: hsl(225deg, 100%, 94%);
+  background-color: hsl(225deg, 100%, 98%);
   display: flex;
 }
 
@@ -45,7 +45,7 @@ body {
   max-width: 25rem;
   min-width: 17.5rem;
   margin: auto;
-  background-color: hsl(225deg, 100%, 98%);
+  background-color: #fff;
   border-radius: 0.9375rem;
   font-size: 1rem;
 }
@@ -64,7 +64,7 @@ body {
   padding: 0.5em;
 }
 .card__plan {
-  background-color: #ebf0ff;
+  background-color: #fafbff;
   margin: 1rem 0;
   border-radius: 0.3125rem;
 }
